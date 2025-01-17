@@ -21,8 +21,11 @@ Este repositório é como um diário de bordo do meu aprendizado. No arquivo `sc
 
 ```
 ├── script.js        # Meu código e práticas em JS
+├── .vscode          # Configurações do editor
+│   └── settings.json
+├── images           # Imagens usadas no repositório
+│   └── banner-js-learner.jpg
 ├── README.md        # Você está aqui! 🌟
-├── index.html        # Página estática
 ```
 
 ---
