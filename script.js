@@ -1,3 +1,4 @@
+'use strict';
 // const country = 'Brazil';
 // const continent = 'South America';
 // const isIsland = false;
@@ -142,11 +143,6 @@
 // const unitedStatesPercentage2 = percentageOfTheWorld2(331);
 // console.log(unitedStatesPercentage2);
 
-// const percentageOfTheWorld3 = (population) =>
-//   `This populations represents ${(population / 79).toFixed(
-//     1
-//   )}% of the global population`;
-
 // console.log(percentageOfTheWorld3(7900));
 
 // const describeCountry = (country, population) =>
@@ -154,24 +150,62 @@
 
 // describeCountry('China', 1441);
 
-const calcAverage = (firstScore, secondScore, thirdScore) =>
-  (firstScore + secondScore + thirdScore) / 3;
+// const calcAverage = (firstScore, secondScore, thirdScore) =>
+//   (firstScore + secondScore + thirdScore) / 3;
 
-const averageScoreDolphins = Number(calcAverage(85, 54, 521).toFixed(0));
-const averageScoreKoalas = Number(calcAverage(23, 324, 27).toFixed(0));
+// const averageScoreDolphins = Number(calcAverage(85, 54, 521).toFixed(0));
+// const averageScoreKoalas = Number(calcAverage(23, 324, 27).toFixed(0));
 
-const checkWinner = function (avgDolphin, avgKoalas) {
-  if (avgDolphin >= avgKoalas * 2) {
-    console.log(
-      `Dolphins' team is the winner! ${avgDolphin} vs. ${avgKoalas} 🏆`
-    );
-  } else if (avgKoalas >= avgDolphin * 2) {
-    console.log(
-      `Koalas' team is the winner! ${avgKoalas} vs. ${avgDolphin} 🏆`
-    );
-  } else {
-    console.log(`No one wins 😥`);
-  }
-};
+// const checkWinner = function (avgDolphin, avgKoalas) {
+//   if (avgDolphin >= avgKoalas * 2) {
+//     console.log(
+//       `Dolphins' team is the winner! ${avgDolphin} vs. ${avgKoalas} 🏆`
+//     );
+//   } else if (avgKoalas >= avgDolphin * 2) {
+//     console.log(
+//       `Koalas' team is the winner! ${avgKoalas} vs. ${avgDolphin} 🏆`
+//     );
+//   } else {
+//     console.log(`No one wins 😥`);
+//   }
+// };
 
-checkWinner(averageScoreDolphins, averageScoreKoalas);
+// checkWinner(averageScoreDolphins, averageScoreKoalas);
+
+// const percentageOfTheWorld = (population) =>
+//   `This populations represents ${(population / 79).toFixed(
+//     1
+//   )}% of the global population`;
+
+// const populations = [1441, 220, 6, 60];
+// const isThereFour =
+//   populations.length === 4 ? `It HAS 4 elements 🤩` : `It hasn't 4 elements 😐`;
+
+// console.log(isThereFour);
+
+// const percentages = [
+//   percentageOfTheWorld(populations[0]),
+//   percentageOfTheWorld(populations[1]),
+//   percentageOfTheWorld(populations[2]),
+//   percentageOfTheWorld(populations[populations.length - 1]),
+// ];
+
+// console.log(percentages);
+
+const neighbours = ['Denmark', 'Poland', 'Austria', 'Switzerland'];
+neighbours.push('Utopia');
+
+console.log(neighbours);
+
+neighbours.pop();
+console.log(neighbours);
+
+neighbours.unshift('Germany');
+console.log(neighbours);
+
+if (!neighbours.includes('Germany')) {
+  console.log('Probably not a central European country :D');
+}
+
+neighbours[neighbours.indexOf('Austria')] = 'Russia';
+console.log(neighbours);
