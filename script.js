@@ -192,20 +192,111 @@
 
 // console.log(percentages);
 
-const neighbours = ['Denmark', 'Poland', 'Austria', 'Switzerland'];
-neighbours.push('Utopia');
+// const neighbours = ['Denmark', 'Poland', 'Austria', 'Switzerland'];
+// neighbours.push('Utopia');
 
-console.log(neighbours);
+// console.log(neighbours);
 
-neighbours.pop();
-console.log(neighbours);
+// neighbours.pop();
+// console.log(neighbours);
 
-neighbours.unshift('Germany');
-console.log(neighbours);
+// neighbours.unshift('Germany');
+// console.log(neighbours);
 
-if (!neighbours.includes('Germany')) {
-  console.log('Probably not a central European country :D');
-}
+// if (!neighbours.includes('Germany')) {
+//   console.log('Probably not a central European country :D');
+// }
 
-neighbours[neighbours.indexOf('Austria')] = 'Russia';
-console.log(neighbours);
+// neighbours[neighbours.indexOf('Austria')] = 'Russia';
+// console.log(neighbours);
+
+// 1. Write a function calcTip that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from the first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+
+// 2. And now let's use arrays! So, create an array called bills containing the test data below.
+
+// 3. Create an array called tips containing the tip value for each bill, calculated from the function you created before.
+
+// BONUS: Create an array totals containing the total values, so the bill + tip.
+
+// TEST DATA: 125, 555, and 44.
+
+// const calcTip = function (bill) {
+//   if (bill >= 50 && bill <= 300) {
+//     return bill * 0.15;
+//   } else {
+//     return bill * 0.2;
+//   }
+// };
+
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+// console.log(bills);
+// console.log(tips);
+// console.log(totals);
+
+// 1. Create an object called myCountry for a country of your choice, containing properties country, capital, language, population -in millions- and neighbours (an array like we used in previous assignments).
+
+// 2 Using the object from the previous assignment, log a string like this to the console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki'.
+
+// 3 Increase the country's population by two million using dot notation, and then decrease it by two million using bracket notation.
+
+// const myCountry = {
+//   country: 'Brazil',
+//   capital: 'Brasilia',
+//   language: 'Portuguese',
+//   population: 220,
+//   neighbours: [
+//     'Argentina',
+//     'Bolivia',
+//     'Colombia',
+//     'Guyana',
+//     'Suriname',
+//     'Venezuela',
+//     'French Guiana',
+//     'Peru',
+//     'Paraguay',
+//   ],
+// };
+
+// console.log(
+//   `${myCountry.country} has ${myCountry.population} million finnish-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`
+// );
+
+// 1. Write "Jonas has 3 friends, and his best friend is called michael" but without hardcoding it, get it from an object, all those information
+
+// const jonas = {
+//   firstName: 'Jonas',
+//   friends: ['Michael', 'Bob', 'Richard'],
+// };
+
+// const jonasMessage = `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`;
+// console.log(jonasMessage);
+
+// Challenge: Jonas is a 46-year old teacher, and he has (or not) a driver's license.
+
+const currentYear = 2025;
+
+const jonas = {
+  firstName: 'Jonas',
+  birthYear: 2000,
+  job: 'teacher',
+  driverLicense: true,
+  calcAge: function () {
+    return currentYear - this.birthYear;
+  },
+  get age() {
+    return this.calcAge();
+  },
+
+  getSummary: function () {
+    const jonasInfo = `${this.firstName} is a ${this.age}-year old ${
+      this.job
+    }, and he has ${this.driverLicense ? 'a' : 'no'} driver's license!`;
+
+    console.log(jonasInfo);
+  },
+};
+
+jonas.getSummary();
