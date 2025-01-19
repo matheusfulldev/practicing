@@ -276,27 +276,126 @@
 
 // Challenge: Jonas is a 46-year old teacher, and he has (or not) a driver's license.
 
-const currentYear = 2025;
+// const currentYear = 2025;
 
-const jonas = {
-  firstName: 'Jonas',
-  birthYear: 2000,
-  job: 'teacher',
-  driverLicense: true,
-  calcAge: function () {
-    return currentYear - this.birthYear;
-  },
-  get age() {
-    return this.calcAge();
-  },
+// const jonas = {
+//   firstName: 'Jonas',
+//   birthYear: 2000,
+//   job: 'teacher',
+//   driverLicense: true,
+//   calcAge: function () {
+//     return currentYear - this.birthYear;
+//   },
+//   get age() {
+//     return this.calcAge();
+//   },
 
-  getSummary: function () {
-    const jonasInfo = `${this.firstName} is a ${this.age}-year old ${
-      this.job
-    }, and he has ${this.driverLicense ? 'a' : 'no'} driver's license!`;
+//   getSummary: function () {
+//     const jonasInfo = `${this.firstName} is a ${this.age}-year old ${
+//       this.job
+//     }, and he has ${this.driverLicense ? 'a' : 'no'} driver's license!`;
 
-    console.log(jonasInfo);
-  },
-};
+//     console.log(jonasInfo);
+//   },
+// };
 
-jonas.getSummary();
+// jonas.getSummary();
+
+// 1. Add a method called describe to the myCountry object. This method will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword.
+
+// 2. Call the describe method.
+
+// 3. Add a method called checkIsland to the myCountry object. This method will set a new property on the object, called isIsland. isIsland will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.
+
+// const myCountry = {
+//   country: 'Brazil',
+//   capital: 'Brasilia',
+//   language: 'Portuguese',
+//   population: 220,
+//   neighbours: [
+//     'Argentina',
+//     'Bolivia',
+//     'Colombia',
+//     'Guyana',
+//     'Suriname',
+//     'Venezuela',
+//     'French Guiana',
+//     'Peru',
+//     'Paraguay',
+//   ],
+
+//   describe: function () {
+//     console.log(
+//       `${this.country} has ${this.population} million finnish-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`
+//     );
+//   },
+
+//   checkIsland: function () {
+//     this.isIsland = !this.neighbours.length > 0 ? true : false;
+//     return this.isIsland;
+//   },
+// };
+
+// myCountry.describe();
+// myCountry.checkIsland();
+
+// console.log(myCountry.isIsland);
+
+// This time, let's use objects to implement the calculations! Remember: BMI = mass / (height * height) (mass in kg and height in meters).
+
+// Your tasks:
+
+// 1. For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith). Name these objects as mark and john, and their properties exactly as fullName, mass and height.
+
+// 2. Create a calcBMI method on each object to calculate the BMI (the same method on both objects). Assign the BMI value to a property called bmi (lowercase), and also return it from the method.
+
+// 3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!".
+
+// TEST DATA: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 m tall.
+
+// const mark = {
+//   fullName: 'Mark Miller',
+//   mass: 78,
+//   height: 1.69,
+
+//   calcBMI: function () {
+//     this.bmi = Number((this.mass / this.height ** 2).toFixed(1));
+//     return this.bmi;
+//   },
+// };
+
+// const john = {
+//   fullName: 'John Smith',
+//   mass: 92,
+//   height: 1.95,
+
+//   calcBMI: function () {
+//     this.bmi = Number((this.mass / this.height ** 2).toFixed(1));
+//     return this.bmi;
+//   },
+// };
+
+// mark.calcBMI();
+// john.calcBMI();
+
+// if (mark.bmi > john.bmi) {
+//   console.log(
+//     `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})!`
+//   );
+// } else if (mark.bmi === john.bmi) {
+//   console.log(
+//     `${mark.fullName}'s BMI (${mark.bmi}) is the same as ${john.fullName}'s (${john.bmi})!`
+//   );
+// } else {
+//   console.log(
+//     `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})!`
+//   );
+// }
+
+//                    Iteration: The for Loop
+
+// 1. There are elections in your country! in a small town, there are only 50 voters. Use a for loop to simulate the 50 people voting, by logging a string like this to the console (for numbers 1 to 50): 'Voter number 1 is currently voting'.
+
+// for (let voters = 1; voters <= 50; voters++) {
+//   console.log(`Voter number ${voters} is currently voting! 😁`);
+// }
