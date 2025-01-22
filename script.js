@@ -461,19 +461,57 @@
 
 // Reflect on what solution you like better for this task: the for loop or the while loop?
 
-const populations = [1441, 220, 6, 60];
-const percentages3 = [];
+// const populations = [1441, 220, 6, 60];
+// const percentages3 = [];
 
-const percentageOfTheWorld2 = function (population) {
-  return `This populations represents ${(population / 79).toFixed(
-    1
-  )}% of the global population`;
+// const percentageOfTheWorld2 = function (population) {
+//   return `This populations represents ${(population / 79).toFixed(
+//     1
+//   )}% of the global population`;
+// };
+
+// let i = 0;
+// while (i < populations.length) {
+//   percentages3.push(percentageOfTheWorld2(populations[i]));
+//   i++;
+// }
+
+// console.log(percentages3);
+
+// CHALLENGE #4
+// Let's improve Steven's tip calculator even more, this time using loops!
+
+// Your tasks:
+
+// Create an array called bills containing all 10 test bill values.
+
+// Create empty arrays for the tips and the totals (tips and totals)
+
+// Use the calcTip function we wrote before (included in the starter code) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
+
+// Write a function calcAverage which takes an array called arr as an argument. This function calculates the average of all numbers in the given array.
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
 
-let i = 0;
-while (i < populations.length) {
-  percentages3.push(percentageOfTheWorld2(populations[i]));
-  i++;
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+  totals.push(bills[i] + tips[i]);
 }
 
-console.log(percentages3);
+const calcAverage = function (arr) {
+  let somaOld = 0;
+  for (let i = 0; i < arr.length; i++) {
+    const atual = arr[i];
+    let somaNew = somaOld + atual;
+    somaOld = somaNew;
+  }
+  return somaOld / arr.length;
+};
+
+console.log(calcAverage(totals));
