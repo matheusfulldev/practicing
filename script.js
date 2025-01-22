@@ -431,3 +431,49 @@
 // }
 
 // console.log(percentages2);
+
+//                                  Looping Backwards and Loops in Loops
+// Store this array of arrays into a variable called listOfNeighbours:
+
+// [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+// Log only the neighbouring countries to the console, one by one, not the entire arrays. Log a string like 'Neighbour: Canada' for each country.
+
+// You will need a loop inside a loop for this. This is actually a bit tricky, so don't worry if it's too difficult for you! But you can still try to figure this out anyway 😉
+
+// const listOfNeighbours = [
+//   ['Canada', 'Mexico'],
+//   ['Spain'],
+//   ['Norway', 'Sweden', 'Russia'],
+// ];
+
+// for (let external = 0; external < listOfNeighbours.length; external++) {
+//   for (
+//     let internal = 0;
+//     internal < listOfNeighbours[external].length;
+//     internal++
+//   ) {
+//     let country = listOfNeighbours[external][internal];
+//     console.log(`This neighbour is: ${country}`);
+//   }
+// }
+
+// Recreate the challenge from the lecture Looping Arrays, Breaking and Continuing, but this time using a while loop (call the array percentages3).
+
+// Reflect on what solution you like better for this task: the for loop or the while loop?
+
+const populations = [1441, 220, 6, 60];
+const percentages3 = [];
+
+const percentageOfTheWorld2 = function (population) {
+  return `This populations represents ${(population / 79).toFixed(
+    1
+  )}% of the global population`;
+};
+
+let i = 0;
+while (i < populations.length) {
+  percentages3.push(percentageOfTheWorld2(populations[i]));
+  i++;
+}
+
+console.log(percentages3);
